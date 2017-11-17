@@ -10,7 +10,7 @@ services:
     #    soft: -1
     #    hard: -1
     volumes:
-      - /opt/docker/elasticsearch/data:/usr/share/elasticsearch/data
+      - /opt/elasticsearch/data:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
         
@@ -24,7 +24,7 @@ services:
     build: fluentd
     restart: always
     volumes:
-      - /opt/docker/fluentd/log:/fluentd/log
+      - /opt/fluentd/log:/fluentd/log
     ports:
       - 24224:24224
 
