@@ -34,6 +34,8 @@ services:
   kibana:
     image: docker.elastic.co/kibana/kibana:6.0.0
     restart: always
+    environment:
+      - "elasticsearch.password=cargoonline42"
     ports:
       - 5601:5601
 
